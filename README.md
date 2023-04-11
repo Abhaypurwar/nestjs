@@ -4,9 +4,9 @@ Steps to run this project:
 
 1. Run `npm i` command
 2. Setup env file by inside bin folder
+        
         #Client interacting port
         PORT = 8000
-
         #Database connection local
         TYPE = 'postgres'
         POSTGRES_HOST = 'localhost'
