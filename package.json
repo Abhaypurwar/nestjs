@@ -1,0 +1,31 @@
+{
+   "name": "nestjs-sample",
+   "version": "0.0.1",
+   "description": "Proof of Concept of nest with postgresql and typeorm as ORM",
+   "author": "Abhay Purwar",
+   "type": "commonjs",
+   "devDependencies": {
+      "@types/node": "^16.11.10",
+      "ts-node": "10.7.0",
+      "typescript": "4.5.2",
+      "source-map-support": "^0.5.20"
+   },
+   "dependencies": {
+      "@nestjs/config": "^2.2.0",
+      "@nestjs/swagger": "^6.3.0",
+      "@nestjs/platform-express": "^9.0.0",
+      "class-validator": "^0.13.2",
+      "class-transformer": "^0.5.1",
+      "pg": "^8.8.0",
+      "reflect-metadata": "^0.1.13",
+      "typeorm": "0.3.11"
+   },
+   "scripts": {
+      "local": "NODE_ENV=local nest start",
+      "dev": "NODE_ENV=dev nest start",
+      "typeorm": "typeorm-ts-node-commonjs",
+      "typeorm:create": "npm run typeorm -- migration:create ./src/migration/$npm_config_name",
+      "typeorm:run:local": "NODE_ENV=local npm run typeorm migration:run -- -d ./src/providers/database/data-source.ts",
+      "typeorm:revert:local": "NODE_ENV=local npm run typeorm migration:revert -- -d ./src/providers/database/data-source.ts"
+   }
+}
