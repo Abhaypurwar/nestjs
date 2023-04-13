@@ -4,7 +4,8 @@ Steps to run this project:
 
 1. Run `npm i` command
 2. Setup env file by inside bin folder
-        
+        bin structure::  bin/.env.local or bin/.env.dev
+
         #Client interacting port
         PORT = 8000
         #Database connection local
@@ -20,3 +21,12 @@ Steps to run this project:
 
 4. Start the Server  
         `npm run local`
+
+5. Swagger URL
+        `http://localhost:8000/swagger`
+
+6. create the migration file
+        `npm run typeorm:create -name=userTable`
+
+7. revert the migration
+        `npm run typeorm:revert:local`
